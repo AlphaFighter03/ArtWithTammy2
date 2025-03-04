@@ -1,0 +1,195 @@
+<div>
+	<label for="phone">Phone Number:</label>
+	<input type="tel" id="phone" name="phone" placeholder="(xxx)-xxx-xxxx" maxlength="10">
+
+                    
+</div>
+
+<label class="first-name">
+	<input type="text" id="fname" name="fname" placeholder="Name" required>
+</label>
+
+
+
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="PageOneLooks.css">
+        <link rel="stylesheet" href="SignUp/SignUp.css">
+        <link rel="stylesheet" href="SignUp/InputLooks.css">
+        <title> Art With Tammy </title> 
+
+        
+    </head>
+    <body> 
+        <div>
+            <button style="position: relative; left: 70%; top: 700px;" id="myButton"> Sign Up</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <div>
+                            <label class="first-name">
+                                <input type="text" id="fname" name="fname" placeholder="Name" required>
+                            </label>
+                            <br>
+                            <br>
+                            <input type="text" id="sname" name="sname" placeholder="Surname" required>
+                            <br>     
+                            <br>
+                            <input type="email" id="ename" name="ename" placeholder="Example@gmail.com" required>
+                            <br>
+                            <br>
+                            <input type="tel" id="tel" onkeyup="addHyphen(this)" placeholder="(xxx)-xxx-xxxx" maxLength="10" required/>
+                                
+                            <script>
+                                function addHyphen (element) {
+                                    let ele = document.getElementById(element.id);
+                                    ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
+                        
+                                    let finalVal = ele.replace(/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)/, '$1$2$3-$4$5$6-$7$8$9$10')
+                                    document.getElementById(element.id).value = finalVal;
+                                }
+                            </script>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <div <!-- Scripts -->
+            <script src="SignUp/SignUp.js"></script>
+
+
+        </div>
+
+        <div <!-- Introduction --> 
+            <h1>Hi, My name is Tammy.</h1>
+            <p>I am based in Richards Bay where i host my Art lessons <a href="https://www.instagram.com/groundedcafe_rb/"> @Ground Cafe</a> </p>
+            <br> 
+            <p><b>Art With Tammy</b> Was birthed in Septemer 2022, With a group of Ladies who had no artistic skill but wanted to be creative.</p>
+            <p>Once a month I host an arcylic Workshop on a saturday morning, choosing a fun theme or topic and break it down into simple steps for everyone to follow along</p> 
+            <p>If you attend my workshop, you will leave with a painting that you have created and you will feel accomplished in what you have achieved</p>
+            <p>I am a self taught artist,I have been painting since I was 9 years old learning what I need as i go on in this journey.</p>
+            <p>I started painting with water colour alongside my mom. Throught the tears experimenting with pencil,pastel and acrylic, but water colour always remaining my favourite...</p>
+            <p>until i discovered oil painting</p>
+        </div>
+
+    </body>
+</html>
+
+
+.second-name{
+  position: relative;
+  font-size: 16px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.second-name input{
+  border: 2px solid #ddd;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+  width: 100;
+  line-height: 2.5;
+
+.second-name .placeholder{
+  position: absolute;
+  left: 14px;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: all 0.3s ease;
+}
+
+.second-name input:valid + .placeholder,
+.second-name input:focus + .placeholder{
+  top: 10px;
+  font-size: 12px;
+  color: #222;
+  transition: border 0.3s ease;
+  
+}
+
+
+.second-name input {
+  background: none;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.second-name input + .placeholder {
+  left: 8px;
+  padding: 0 5px;
+}
+
+.second-name input.dirty,
+.second-name input:not(:placeholder-shown),
+.second-name input:focus {
+  border-color: #222;
+  transition-delay: 0.1s
+}
+
+.second-name input.dirty + .placeholder,
+.second-name input:not(:placeholder-shown) + .placeholder,
+.second-name input:focus + .placeholder {
+  top: 0;
+  font-size: 10px;
+  color: #222;
+  background: #fff;
+  width: auto
+}
+
+
+
+
+.first-name input {
+    border: 2px solid #222;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+}
+  
+.first-name .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        color 0.3s ease;
+}
+  
+.first-name input.dirty + .placeholder,
+.first-name input:focus + .placeholder,
+.first-name input:not(:placeholder-shown) + .placeholder {
+    top: 1px;
+    font-size: 14px;
+    color: #222;
+}

@@ -1,0 +1,296 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+.first-name {
+    position: relative;
+    font-size: 14px;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    display: inline-block;
+    --field-padding: 12px;
+}
+  
+.first-name input {
+    border: 2px solid #f2f2f2;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: var(--field-padding);
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+}
+  
+.first-name .placeholder {
+    position: absolute;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 22px;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: 
+        top 0.3s ease,
+        color 0.3s ease;
+}
+  
+.first-name input.dirty,
+.first-name input:not(:placeholder-shown),
+.first-name input:focus {
+  border: 2px solid #f2f2f2;
+  transition-delay: 0.1s
+}
+
+.first-name input.dirty + .placeholder,
+.first-name input:not(:placeholder-shown) + .placeholder,
+.first-name input:focus + .placeholder {
+  top: 0;
+  font-size: 12px;
+  color: #242424;
+  background: transparent;
+  width: auto
+}
+
+.first-name input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.5s ease;
+}
+
+.first-name input.dirty,
+.first-name input:not(:placeholder-shown),
+.first-name input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+
+.second-name {
+  position: relative;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.second-name input {
+  border: 2px solid #f2f2f2;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+}
+
+.second-name .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+      top 0.3s ease,
+      color 0.3s ease;
+}
+
+.second-name input.dirty,
+.second-name input:not(:placeholder-shown),
+.second-name input:focus {
+  border: 2px solid #f2f2f2;
+  transition-delay: 0.1s
+}
+
+.second-name input.dirty + .placeholder,
+.second-name input:not(:placeholder-shown) + .placeholder,
+.second-name input:focus + .placeholder {
+  top: 0;
+  font-size: 12px;
+  color: #242424;
+  background: transparent;
+  width: auto
+}
+
+.second-name input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.5s ease;
+}
+
+.second-name input.dirty,
+.second-name input:not(:placeholder-shown),
+.second-name input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+.email-name {
+  position: relative;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.email-name input {
+  border: 2px solid #f2f2f2;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+}
+
+.email-name .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+      top 0.3s ease,
+      color 0.3s ease;
+}
+
+.email-name input.dirty,
+.email-name input:not(:placeholder-shown),
+.email-name input:focus {
+  border: 2px solid #f2f2f2;
+  transition-delay: 0.1s
+}
+
+.email-name input.dirty + .placeholder,
+.email-name input:not(:placeholder-shown) + .placeholder,
+.email-name input:focus + .placeholder {
+  top: 0;
+  font-size: 12px;
+  color: #242424;
+  background: transparent;
+  width: auto
+}
+
+.email-name input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.5s ease;
+}
+
+.email-name input.dirty,
+.email-name input:not(:placeholder-shown),
+.email-name input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+.phone-number {
+  position: relative;
+  font-size: 14px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  display: inline-block;
+  --field-padding: 12px;
+}
+
+.phone-number input {
+  border: 2px solid #f2f2f2;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+}
+
+.phone-number .placeholder {
+  position: absolute;
+  left: var(--field-padding);
+  width: calc(100% - (var(--field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+      top 0.3s ease,
+      color 0.3s ease;
+}
+
+.phone-number input.dirty,
+.phone-number input:not(:placeholder-shown),
+.phone-number input:focus {
+  border: 2px solid #f2f2f2;
+  transition-delay: 0.1s
+}
+
+.phone-number input.dirty + .placeholder,
+.phone-number input:not(:placeholder-shown) + .placeholder,
+.phone-number input:focus + .placeholder {
+  top: 0;
+  font-size: 12px;
+  color: #242424;
+  background: transparent;
+  width: auto
+}
+
+.phone-number input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+    transition: background-size 0.5s ease;
+}
+
+.phone-number input.dirty,
+.phone-number input:not(:placeholder-shown),
+.phone-number input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}

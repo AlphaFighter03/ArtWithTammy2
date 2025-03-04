@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="PageOneLooks.css">
+        <link rel="stylesheet" href="SignUp/SignUp.css">
+        <link rel="stylesheet" href="SignUp/InputLooks.css">
+        <title> Art With Tammy </title> 
+
+        
+    </head>
+    <body> 
+        <div>
+            <button style="position: relative; left: 70%; top: 700px;" id="myButton"> Sign Up</button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <form>
+                        <div <!-- Sign Up-->
+                            <label class="first-name">
+                                <input type="text" id="fname" name="fname" placeholder=" " required>
+                                <span class="placeholder">Name</span>
+                            </label>
+                            <br>
+                            <br>
+                            <label class="second-name">
+                             <input type="text" id="sname" name="sname" placeholder=" " required>
+                             <span class="placeholder">Surname</span>
+                            </label>
+                            <br>     
+                            <br>
+                            <label class="email-name">
+                                <input type="email" id="ename" name="ename" placeholder=" " required>
+                                <span class="placeholder">Email Address</span>
+                            </label>
+                            <br>
+                            <br>
+                            <label class="phone-number">
+                                <input type="tel" id="tel" onkeyup="addHyphen(this)" placeholder=" " maxLength="10" required/>
+                                <span class="placeholder"> Phone-Number</span>
+                            <script>
+                                function addHyphen (element) {
+                                    let ele = document.getElementById(element.id);
+                                    ele = ele.value.split('-').join('');    // Remove dash (-) if mistakenly entered.
+                        
+                                    let finalVal = ele.replace(/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)/, '$1$2$3-$4$5$6-$7$8$9$10')
+                                    document.getElementById(element.id).value = finalVal;
+                                }
+                            </script>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+        <div <!-- Scripts -->
+            <script src="SignUp/SignUp.js"></script>
+
+
+        </div>
+
+        <div <!-- Introduction --> 
+            <h1>Hi, My name is Tammy.</h1>
+            <p>I am based in Richards Bay where i host my Art lessons <a href="https://www.instagram.com/groundedcafe_rb/"> @Ground Cafe</a> </p>
+            <br> 
+            <p><b>Art With Tammy</b> Was birthed in Septemer 2022, With a group of Ladies who had no artistic skill but wanted to be creative.</p>
+            <p>Once a month I host an arcylic Workshop on a saturday morning, choosing a fun theme or topic and break it down into simple steps for everyone to follow along</p> 
+            <p>If you attend my workshop, you will leave with a painting that you have created and you will feel accomplished in what you have achieved</p>
+            <p>I am a self taught artist,I have been painting since I was 9 years old learning what I need as i go on in this journey.</p>
+            <p>I started painting with water colour alongside my mom. Throught the tears experimenting with pencil,pastel and acrylic, but water colour always remaining my favourite...</p>
+            <p>until i discovered oil painting</p>
+        </div>
+
+    </body>
+</html>

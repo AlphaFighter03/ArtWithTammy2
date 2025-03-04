@@ -1,0 +1,43 @@
+body{
+    background-image: url(Images/MomBackground.png);
+    background-size: fixed;
+    background-repeat: no-repeat;
+    background-color: #FFC5D3;
+    background-position: center;
+    background-position: top;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    border: 10px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;    
+}
+
+a:visited{
+    color: blue;
+}
+
+
+
+
+#box1{
+    border: 1px solid;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+
+    position: fixed;
+
+    bottom: 0px;
+    right: 0px;
+    
+}
